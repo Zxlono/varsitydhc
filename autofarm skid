@@ -107,15 +107,15 @@ local Update = function()
 
 		if (Point) then 
 			if (v.Humanoid.Health > 0) then 
-				Point.BackgroundColor3 = Color3.fromRGB(0, 200, 0)
+				
 			end
 
 			if (v.Humanoid.Health <= 0) then 
-				Point.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+
 			end
 
 			if (v == Cashier) then 
-				Point.BackgroundColor3 = Color3.fromRGB(200, 200, 0)
+
 
 				TOOLTIP.ZIndex = 10
 				TOOLTIP.Visible = true
