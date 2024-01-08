@@ -77,7 +77,7 @@ FreeVersionText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 FreeVersionText.BackgroundTransparency = 1.000
 FreeVersionText.BorderColor3 = Color3.fromRGB(0, 0, 0)
 FreeVersionText.BorderSizePixel = 0
-FreeVersionText.Position = UDim2.new(0.47400406, 0, 0.668529272, 0)
+FreeVersionText.Position = UDim2.new(0.47400406, 0, 0.68479836, 0)
 FreeVersionText.Size = UDim2.new(0.170921996, 0, 0.0714985356, 0)
 FreeVersionText.Font = Enum.Font.Unknown
 FreeVersionText.Text = "(Free Version)"
@@ -106,7 +106,7 @@ VersionText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 VersionText.BackgroundTransparency = 1.000
 VersionText.BorderColor3 = Color3.fromRGB(0, 0, 0)
 VersionText.BorderSizePixel = 0
-VersionText.Position = UDim2.new(0.472072244, 0, 0.634364426, 0)
+VersionText.Position = UDim2.new(0.471397728, 0, 0.651372969, 0)
 VersionText.Size = UDim2.new(0.170921996, 0, 0.0714985356, 0)
 VersionText.Font = Enum.Font.Unknown
 VersionText.Text = "Version 1.0.0"
@@ -138,7 +138,7 @@ FPS.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 FPS.BackgroundTransparency = 1.000
 FPS.BorderColor3 = Color3.fromRGB(0, 0, 0)
 FPS.BorderSizePixel = 0
-FPS.Position = UDim2.new(0.481648505, 0, 0.555876076, 0)
+FPS.Position = UDim2.new(0.481648505, 0, 0.565489769, 0)
 FPS.Size = UDim2.new(0.149645388, 0, 0.0538687594, 0)
 FPS.Font = Enum.Font.Unknown
 FPS.Text = "Loading FPS.."
@@ -154,7 +154,7 @@ TotalTime.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TotalTime.BackgroundTransparency = 1.000
 TotalTime.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TotalTime.BorderSizePixel = 0
-TotalTime.Position = UDim2.new(0.48267445, 0, 0.599050581, 0)
+TotalTime.Position = UDim2.new(0.48267445, 0, 0.603487611, 0)
 TotalTime.Size = UDim2.new(0.149645388, 0, 0.0538687594, 0)
 TotalTime.Font = Enum.Font.Unknown
 TotalTime.Text = "Loading Timer.."
@@ -170,7 +170,7 @@ UiCredit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 UiCredit.BackgroundTransparency = 1.000
 UiCredit.BorderColor3 = Color3.fromRGB(0, 0, 0)
 UiCredit.BorderSizePixel = 0
-UiCredit.Position = UDim2.new(0.47400406, 0, 0.703692675, 0)
+UiCredit.Position = UDim2.new(0.47400406, 0, 0.717003763, 0)
 UiCredit.Size = UDim2.new(0.170921996, 0, 0.0714985356, 0)
 UiCredit.Font = Enum.Font.Unknown
 UiCredit.Text = "UI Made By kobe0921"
@@ -186,7 +186,7 @@ moneyTextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 moneyTextLabel.BackgroundTransparency = 1.000
 moneyTextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
 moneyTextLabel.BorderSizePixel = 0
-moneyTextLabel.Position = UDim2.new(0.48267445, 0, 0.514739454, 0)
+moneyTextLabel.Position = UDim2.new(0.48267445, 0, 0.522873998, 0)
 moneyTextLabel.Size = UDim2.new(0.149645388, 0, 0.0538687594, 0)
 moneyTextLabel.Font = Enum.Font.Unknown
 moneyTextLabel.Text = "Loading FPS.."
@@ -198,7 +198,7 @@ UIAspectRatioConstraint_9.AspectRatio = 3.836
 
 -- Scripts:
 
-local function TNZVU_fake_script() -- Display.LocalScript 
+local function SBWT_fake_script() -- Display.LocalScript 
 	local script = Instance.new('LocalScript', Display)
 
 	local frame = script.Parent
@@ -207,8 +207,8 @@ local function TNZVU_fake_script() -- Display.LocalScript
 	
 	frame.Text = "" .. player.DisplayName
 end
-coroutine.wrap(TNZVU_fake_script)()
-local function FFZYC_fake_script() -- Frame.PlayerImageScript 
+coroutine.wrap(SBWT_fake_script)()
+local function HWSQZ_fake_script() -- Frame.PlayerImageScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	local frame = script.Parent
@@ -227,8 +227,8 @@ local function FFZYC_fake_script() -- Frame.PlayerImageScript
 	
 	frame.PlayerImage.Image = content
 end
-coroutine.wrap(FFZYC_fake_script)()
-local function QPSK_fake_script() -- Username.LocalScript 
+coroutine.wrap(HWSQZ_fake_script)()
+local function PQJT_fake_script() -- Username.LocalScript 
 	local script = Instance.new('LocalScript', Username)
 
 	local frame = script.Parent
@@ -237,8 +237,8 @@ local function QPSK_fake_script() -- Username.LocalScript
 	
 	frame.Text = "" .. player.Name
 end
-coroutine.wrap(QPSK_fake_script)()
-local function XYDIN_fake_script() -- FPS.FPSScript 
+coroutine.wrap(PQJT_fake_script)()
+local function LARQII_fake_script() -- FPS.FPSScript 
 	local script = Instance.new('LocalScript', FPS)
 
 	local RunService = game:GetService('RunService')
@@ -254,8 +254,8 @@ local function XYDIN_fake_script() -- FPS.FPSScript
 		framesloaded = 0
 	end
 end
-coroutine.wrap(XYDIN_fake_script)()
-local function HZDRID_fake_script() -- TotalTime.LocalScript 
+coroutine.wrap(LARQII_fake_script)()
+local function NWOY_fake_script() -- TotalTime.LocalScript 
 	local script = Instance.new('LocalScript', TotalTime)
 
 	-- Put this script in a LocalScript in a player's PlayerGui
@@ -283,8 +283,8 @@ local function HZDRID_fake_script() -- TotalTime.LocalScript
 		updateTime()
 	end
 end
-coroutine.wrap(HZDRID_fake_script)()
-local function WDPTL_fake_script() -- Frame.PingReturner 
+coroutine.wrap(NWOY_fake_script)()
+local function AQZIIJ_fake_script() -- Frame.PingReturner 
 	local script = Instance.new('Script', Frame)
 
 	local event = game:GetService("ReplicatedStorage"):WaitForChild("GetPing")
@@ -293,8 +293,8 @@ local function WDPTL_fake_script() -- Frame.PingReturner
 		return player:GetNetworkPing()
 	end
 end
-coroutine.wrap(WDPTL_fake_script)()
-local function IJEDGE_fake_script() -- moneyTextLabel.MoneyLabelScript 
+coroutine.wrap(AQZIIJ_fake_script)()
+local function RRQQ_fake_script() -- moneyTextLabel.MoneyLabelScript 
 	local script = Instance.new('LocalScript', moneyTextLabel)
 
 	-- Put this script in a LocalScript
@@ -313,8 +313,8 @@ local function IJEDGE_fake_script() -- moneyTextLabel.MoneyLabelScript
 	-- Initial update
 	updateMoney()
 end
-coroutine.wrap(IJEDGE_fake_script)()
-local function HTJMZV_fake_script() -- AutoFarmScreen.ServerTime 
+coroutine.wrap(RRQQ_fake_script)()
+local function CVEHG_fake_script() -- AutoFarmScreen.ServerTime 
 	local script = Instance.new('Script', AutoFarmScreen)
 
 	script.Hours.Value = 0
@@ -389,4 +389,4 @@ local function HTJMZV_fake_script() -- AutoFarmScreen.ServerTime
 	end
 	
 end
-coroutine.wrap(HTJMZV_fake_script)()
+coroutine.wrap(CVEHG_fake_script)()
