@@ -198,7 +198,7 @@ UIAspectRatioConstraint_9.AspectRatio = 3.836
 
 -- Scripts:
 
-local function YDQZRM_fake_script() -- Display.LocalScript 
+local function NFEXZHC_fake_script() -- Display.LocalScript 
 	local script = Instance.new('LocalScript', Display)
 
 	local frame = script.Parent
@@ -207,8 +207,8 @@ local function YDQZRM_fake_script() -- Display.LocalScript
 	
 	frame.Text = "" .. player.DisplayName
 end
-coroutine.wrap(YDQZRM_fake_script)()
-local function RQVYC_fake_script() -- Frame.PlayerImageScript 
+coroutine.wrap(NFEXZHC_fake_script)()
+local function UCUASPT_fake_script() -- Frame.PlayerImageScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	local frame = script.Parent
@@ -227,8 +227,8 @@ local function RQVYC_fake_script() -- Frame.PlayerImageScript
 	
 	frame.PlayerImage.Image = content
 end
-coroutine.wrap(RQVYC_fake_script)()
-local function LNVDAZL_fake_script() -- Username.LocalScript 
+coroutine.wrap(UCUASPT_fake_script)()
+local function LJBFBH_fake_script() -- Username.LocalScript 
 	local script = Instance.new('LocalScript', Username)
 
 	local frame = script.Parent
@@ -237,8 +237,8 @@ local function LNVDAZL_fake_script() -- Username.LocalScript
 	
 	frame.Text = "" .. player.Name
 end
-coroutine.wrap(LNVDAZL_fake_script)()
-local function MMFP_fake_script() -- FPS.FPSScript 
+coroutine.wrap(LJBFBH_fake_script)()
+local function VGYLGDD_fake_script() -- FPS.FPSScript 
 	local script = Instance.new('LocalScript', FPS)
 
 	local RunService = game:GetService('RunService')
@@ -254,8 +254,8 @@ local function MMFP_fake_script() -- FPS.FPSScript
 		framesloaded = 0
 	end
 end
-coroutine.wrap(MMFP_fake_script)()
-local function ONUGXC_fake_script() -- TotalTime.LocalScript 
+coroutine.wrap(VGYLGDD_fake_script)()
+local function PWKN_fake_script() -- TotalTime.LocalScript 
 	local script = Instance.new('LocalScript', TotalTime)
 
 	-- Put this script in a LocalScript in a player's PlayerGui
@@ -275,7 +275,7 @@ local function ONUGXC_fake_script() -- TotalTime.LocalScript
 	
 		-- Update your existing TextLabel with the time information
 		local timeLabel = script.Parent -- Replace with the actual path to your TextLabel
-		timeLabel.Text = string.format("Time Played: %dd %dh %dm %ds", days, hours, minutes, seconds)
+		timeLabel.Text = string.format("Time Elapsed: %dd %dh %dm %ds", days, hours, minutes, seconds)
 	end
 	
 	-- Update every second
@@ -283,8 +283,8 @@ local function ONUGXC_fake_script() -- TotalTime.LocalScript
 		updateTime()
 	end
 end
-coroutine.wrap(ONUGXC_fake_script)()
-local function IKPYD_fake_script() -- Frame.PingReturner 
+coroutine.wrap(PWKN_fake_script)()
+local function NPRYKTN_fake_script() -- Frame.PingReturner 
 	local script = Instance.new('Script', Frame)
 
 	local event = game:GetService("ReplicatedStorage"):WaitForChild("GetPing")
@@ -293,8 +293,8 @@ local function IKPYD_fake_script() -- Frame.PingReturner
 		return player:GetNetworkPing()
 	end
 end
-coroutine.wrap(IKPYD_fake_script)()
-local function BQBZQA_fake_script() -- moneyTextLabel.MoneyLabelScript 
+coroutine.wrap(NPRYKTN_fake_script)()
+local function FJSW_fake_script() -- moneyTextLabel.MoneyLabelScript 
 	local script = Instance.new('LocalScript', moneyTextLabel)
 
 	-- Put this script in a LocalScript
@@ -313,8 +313,8 @@ local function BQBZQA_fake_script() -- moneyTextLabel.MoneyLabelScript
 	-- Initial update
 	updateMoney()
 end
-coroutine.wrap(BQBZQA_fake_script)()
-local function IKGUPG_fake_script() -- AutoFarmScreen.ServerTime 
+coroutine.wrap(FJSW_fake_script)()
+local function NGYKUQF_fake_script() -- AutoFarmScreen.ServerTime 
 	local script = Instance.new('Script', AutoFarmScreen)
 
 	script.Hours.Value = 0
@@ -389,4 +389,4 @@ local function IKGUPG_fake_script() -- AutoFarmScreen.ServerTime
 	end
 	
 end
-coroutine.wrap(IKGUPG_fake_script)()
+coroutine.wrap(NGYKUQF_fake_script)()
