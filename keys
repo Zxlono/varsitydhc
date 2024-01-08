@@ -1,4 +1,4 @@
-return {
+local keys = {
     "_Varsitydfujiewnqroihtzxcvbnmas",
     "_Varsityirhgbnmjlkfytgdweqopqz",
     "_Varsityrthzxcvbnqweyuioasjkdf",
@@ -146,29 +146,7 @@ return {
     "_Varsitytyuiooiuytrewqasdfghjklzx",
     "_Varsityoiuytrewqzxcvbnmasdfghjkl",
     "_Varsityqwertyuiopoiuytrewqasdfgh",
-    "_Varsityzxcvbnmasdfghjklpoiuytrew",
-    "_Varsityytrewqzxcvbnmasdfghjklpoi",
-    "_Varsitytyuiooiuytrewqasdfghjklzx",
-    "_Varsityoiuytrewqzxcvbnmasdfghjkl",
-    "_Varsityqwertyuiopoiuytrewqasdfgh",
-    "_Varsityzxcvbnmasdfghjklpoiuytrew",
-    "_Varsityytrewqzxcvbnmasdfghjklpoi",
-    "_Varsitytyuiooiuytrewqasdfghjklzx",
-    "_Varsityoiuytrewqzxcvbnmasdfghjkl",
-    "_Varsityqwertyuiopoiuytrewqasdfgh",
-    "_Varsityzxcvbnmasdfghjklpoiuytrew",
-    "_Varsityytrewqzxcvbnmasdfghjklpoi",
-    "_Varsitytyuiooiuytrewqasdfghjklzx",
-    "_Varsityoiuytrewqzxcvbnmasdfghjkl",
-    "_Varsityqwertyuiopoiuytrewqasdfgh",
-    "_Varsityzxcvbnmasdfghjklpoiuytrew",
-    "_Varsityytrewqzxcvbnmasdfghjklpoi",
-    "_Varsitytyuiooiuytrewqasdfghjklzx",
-    "_Varsityoiuytrewqzxcvbnmasdfghjkl",
-    "_Varsityqwertyuiopoiuytrewqasdfgh",
-    "_Varsityzxcvbnmasdfghjklpoiuytrew",
-    "_Varsityytrewqzxcvbnmasdfghjklpoi",
-    "_Varsitytyuiooiuytrewqasdfghjklzx",
-    "_Varsityoiuytrewqzxcvbnmasdfghjkl",
-    "_Varsityqwertyuiopoiuytrewqasdfgh",
+    "_Varsityzxcvbnmasdfghjklpoiuytrew"
 }
+
+-- Now 'keys' is a Lua table containing all the keys
