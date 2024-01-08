@@ -1,0 +1,355 @@
+-- Made By kobe0921 On Discord
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local AutoFarmScreen = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local PlayerImage = Instance.new("ImageLabel")
+local UICorner = Instance.new("UICorner")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+local VarsityAutoFarmText = Instance.new("TextLabel")
+local UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint")
+local FreeVersionText = Instance.new("TextLabel")
+local UIAspectRatioConstraint_3 = Instance.new("UIAspectRatioConstraint")
+local Display = Instance.new("TextLabel")
+local VersionText = Instance.new("TextLabel")
+local UIAspectRatioConstraint_4 = Instance.new("UIAspectRatioConstraint")
+local Username = Instance.new("TextLabel")
+local UIAspectRatioConstraint_5 = Instance.new("UIAspectRatioConstraint")
+local FPS = Instance.new("TextLabel")
+local UIAspectRatioConstraint_6 = Instance.new("UIAspectRatioConstraint")
+local TotalTime = Instance.new("TextLabel")
+local UIAspectRatioConstraint_7 = Instance.new("UIAspectRatioConstraint")
+local UiCredit = Instance.new("TextLabel")
+local UIAspectRatioConstraint_8 = Instance.new("UIAspectRatioConstraint")
+
+--Properties:
+
+AutoFarmScreen.Name = "AutoFarmScreen"
+AutoFarmScreen.Parent = game.CoreGui
+AutoFarmScreen.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = AutoFarmScreen
+Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(-0.297036678, 0, -0.328089327, 0)
+Frame.Size = UDim2.new(1.42006266, 0, 1.68611121, 0)
+
+PlayerImage.Name = "PlayerImage"
+PlayerImage.Parent = Frame
+PlayerImage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PlayerImage.BackgroundTransparency = 1.000
+PlayerImage.BorderColor3 = Color3.fromRGB(0, 0, 0)
+PlayerImage.BorderSizePixel = 0
+PlayerImage.Position = UDim2.new(0.491277635, 0, 0.234119758, 0)
+PlayerImage.Size = UDim2.new(0.113494195, 0, 0.181281403, 0)
+PlayerImage.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+UICorner.CornerRadius = UDim.new(0, 100)
+UICorner.Parent = PlayerImage
+
+UIAspectRatioConstraint.Parent = PlayerImage
+UIAspectRatioConstraint.AspectRatio = 0.980
+
+VarsityAutoFarmText.Name = "VarsityAutoFarmText"
+VarsityAutoFarmText.Parent = Frame
+VarsityAutoFarmText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VarsityAutoFarmText.BackgroundTransparency = 1.000
+VarsityAutoFarmText.BorderColor3 = Color3.fromRGB(0, 0, 0)
+VarsityAutoFarmText.BorderSizePixel = 0
+VarsityAutoFarmText.Position = UDim2.new(0.407633692, 0, 0.111728691, 0)
+VarsityAutoFarmText.Size = UDim2.new(0.323068619, 0, 0.162422761, 0)
+VarsityAutoFarmText.Font = Enum.Font.LuckiestGuy
+VarsityAutoFarmText.Text = "Varsity AutoFarm"
+VarsityAutoFarmText.TextColor3 = Color3.fromRGB(255, 255, 255)
+VarsityAutoFarmText.TextSize = 31.000
+
+UIAspectRatioConstraint_2.Parent = VarsityAutoFarmText
+UIAspectRatioConstraint_2.AspectRatio = 2.953
+
+FreeVersionText.Name = "FreeVersionText"
+FreeVersionText.Parent = Frame
+FreeVersionText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FreeVersionText.BackgroundTransparency = 1.000
+FreeVersionText.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FreeVersionText.BorderSizePixel = 0
+FreeVersionText.Position = UDim2.new(0.47400406, 0, 0.641907156, 0)
+FreeVersionText.Size = UDim2.new(0.170921996, 0, 0.0714985356, 0)
+FreeVersionText.Font = Enum.Font.Unknown
+FreeVersionText.Text = "(Free Version)"
+FreeVersionText.TextColor3 = Color3.fromRGB(255, 255, 255)
+FreeVersionText.TextSize = 17.000
+
+UIAspectRatioConstraint_3.Parent = FreeVersionText
+UIAspectRatioConstraint_3.AspectRatio = 3.301
+
+Display.Name = "Display"
+Display.Parent = Frame
+Display.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Display.BackgroundTransparency = 1.000
+Display.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Display.BorderSizePixel = 0
+Display.Position = UDim2.new(0.500104845, 0, 0.44080615, 0)
+Display.Size = UDim2.new(0.0949343666, 0, 0.0308278371, 0)
+Display.Font = Enum.Font.Unknown
+Display.Text = "PlayerDisplay"
+Display.TextColor3 = Color3.fromRGB(255, 255, 255)
+Display.TextSize = 21.000
+
+VersionText.Name = "VersionText"
+VersionText.Parent = Frame
+VersionText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VersionText.BackgroundTransparency = 1.000
+VersionText.BorderColor3 = Color3.fromRGB(0, 0, 0)
+VersionText.BorderSizePixel = 0
+VersionText.Position = UDim2.new(0.47274676, 0, 0.60330528, 0)
+VersionText.Size = UDim2.new(0.170921996, 0, 0.0714985356, 0)
+VersionText.Font = Enum.Font.Unknown
+VersionText.Text = "Version 1.0.0"
+VersionText.TextColor3 = Color3.fromRGB(255, 255, 255)
+VersionText.TextSize = 17.000
+
+UIAspectRatioConstraint_4.Parent = VersionText
+UIAspectRatioConstraint_4.AspectRatio = 3.301
+
+Username.Name = "Username"
+Username.Parent = Frame
+Username.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Username.BackgroundTransparency = 1.000
+Username.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Username.BorderSizePixel = 0
+Username.Position = UDim2.new(0.482765406, 0, 0.472048253, 0)
+Username.Size = UDim2.new(0.149645388, 0, 0.0538687594, 0)
+Username.Font = Enum.Font.Unknown
+Username.Text = "PlayerUser"
+Username.TextColor3 = Color3.fromRGB(255, 255, 255)
+Username.TextSize = 15.000
+
+UIAspectRatioConstraint_5.Parent = Username
+UIAspectRatioConstraint_5.AspectRatio = 3.836
+
+FPS.Name = "FPS"
+FPS.Parent = Frame
+FPS.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FPS.BackgroundTransparency = 1.000
+FPS.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FPS.BorderSizePixel = 0
+FPS.Position = UDim2.new(0.482323021, 0, 0.564010561, 0)
+FPS.Size = UDim2.new(0.149645388, 0, 0.0538687594, 0)
+FPS.Font = Enum.Font.Unknown
+FPS.Text = "Loading FPS.."
+FPS.TextColor3 = Color3.fromRGB(255, 255, 255)
+FPS.TextSize = 16.000
+
+UIAspectRatioConstraint_6.Parent = FPS
+UIAspectRatioConstraint_6.AspectRatio = 3.836
+
+TotalTime.Name = "TotalTime"
+TotalTime.Parent = Frame
+TotalTime.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TotalTime.BackgroundTransparency = 1.000
+TotalTime.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TotalTime.BorderSizePixel = 0
+TotalTime.Position = UDim2.new(0.482801318, 0, 0.524769127, 0)
+TotalTime.Size = UDim2.new(0.149645388, 0, 0.0538687594, 0)
+TotalTime.Font = Enum.Font.Unknown
+TotalTime.Text = "Loading Timer.."
+TotalTime.TextColor3 = Color3.fromRGB(255, 255, 255)
+TotalTime.TextSize = 16.000
+
+UIAspectRatioConstraint_7.Parent = TotalTime
+UIAspectRatioConstraint_7.AspectRatio = 3.836
+
+UiCredit.Name = "UiCredit"
+UiCredit.Parent = Frame
+UiCredit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+UiCredit.BackgroundTransparency = 1.000
+UiCredit.BorderColor3 = Color3.fromRGB(0, 0, 0)
+UiCredit.BorderSizePixel = 0
+UiCredit.Position = UDim2.new(0.47400406, 0, 0.682986379, 0)
+UiCredit.Size = UDim2.new(0.170921996, 0, 0.0714985356, 0)
+UiCredit.Font = Enum.Font.Unknown
+UiCredit.Text = "UI Made By kobe0921"
+UiCredit.TextColor3 = Color3.fromRGB(255, 255, 255)
+UiCredit.TextSize = 17.000
+
+UIAspectRatioConstraint_8.Parent = UiCredit
+UIAspectRatioConstraint_8.AspectRatio = 3.301
+
+-- Scripts:
+
+local function HOBIFXO_fake_script() -- Display.LocalScript 
+	local script = Instance.new('LocalScript', Display)
+
+	local frame = script.Parent
+	
+	local player = game.Players.LocalPlayer
+	
+	frame.Text = "" .. player.DisplayName
+end
+coroutine.wrap(HOBIFXO_fake_script)()
+local function PKNPP_fake_script() -- Frame.PlayerImageScript 
+	local script = Instance.new('LocalScript', Frame)
+
+	local frame = script.Parent
+	
+	
+	
+	local player = game.Players.LocalPlayer
+	
+	
+	
+	local userId = player.UserId
+	local thumbType = Enum.ThumbnailType.AvatarBust
+	local thumbSize = Enum.ThumbnailSize.Size180x180
+	
+	local content, isReady = game.Players:GetUserThumbnailAsync(userId, thumbType, thumbSize)
+	
+	frame.PlayerImage.Image = content
+end
+coroutine.wrap(PKNPP_fake_script)()
+local function ZLTLR_fake_script() -- Username.LocalScript 
+	local script = Instance.new('LocalScript', Username)
+
+	local frame = script.Parent
+	
+	local player = game.Players.LocalPlayer
+	
+	frame.Text = "" .. player.Name
+end
+coroutine.wrap(ZLTLR_fake_script)()
+local function JPXCQN_fake_script() -- FPS.FPSScript 
+	local script = Instance.new('LocalScript', FPS)
+
+	local RunService = game:GetService('RunService')
+	local framesloaded = 0
+	
+	RunService.RenderStepped:Connect(function()
+		framesloaded += 1
+	end)
+	
+	while true do
+		wait(1)
+		script.Parent.Text = "FPS: " .. framesloaded
+		framesloaded = 0
+	end
+end
+coroutine.wrap(JPXCQN_fake_script)()
+local function WTBN_fake_script() -- TotalTime.LocalScript 
+	local script = Instance.new('LocalScript', TotalTime)
+
+	-- Put this script in a LocalScript in a player's PlayerGui
+	
+	local player = game.Players.LocalPlayer
+	
+	local startTime = tick()
+	
+	-- Update function to display time
+	local function updateTime()
+		local elapsedTime = tick() - startTime
+	
+		local seconds = math.floor(elapsedTime % 60)
+		local minutes = math.floor((elapsedTime / 60) % 60)
+		local hours = math.floor((elapsedTime / 3600) % 24)
+		local days = math.floor(elapsedTime / (3600 * 24))
+	
+		-- Update your existing TextLabel with the time information
+		local timeLabel = script.Parent -- Replace with the actual path to your TextLabel
+		timeLabel.Text = string.format("Time Played: %dd %dh %dm %ds", days, hours, minutes, seconds)
+	end
+	
+	-- Update every second
+	while wait(1) do
+		updateTime()
+	end
+end
+coroutine.wrap(WTBN_fake_script)()
+local function IHFDT_fake_script() -- Frame.PingReturner 
+	local script = Instance.new('Script', Frame)
+
+	local event = game:GetService("ReplicatedStorage"):WaitForChild("GetPing")
+	
+	event.OnServerInvoke = function(player)
+		return player:GetNetworkPing()
+	end
+end
+coroutine.wrap(IHFDT_fake_script)()
+local function DBIDFR_fake_script() -- AutoFarmScreen.ServerTime 
+	local script = Instance.new('Script', AutoFarmScreen)
+
+	script.Hours.Value = 0
+	script.Minutes.Value = 0
+	script.Seconds.Value = 0
+	script.TotalTime.Value = "0:00:00"
+	
+	stringMinutes = "00"
+	stringSeconds = "00"
+	
+	while true do
+		wait(1)
+		script.Seconds.Value = script.Seconds.Value + 1
+		if script.Seconds.Value == 60 then
+			script.Seconds.Value = 0
+			script.Minutes.Value = script.Minutes.Value + 1
+			if script.Minutes.Value == 60 then
+				script.Minutes.Value = 0
+				script.Hours.Value = script.Hours.Value + 1
+			end
+		end
+	
+		if script.Seconds.Value == 0 then
+			stringSeconds = "00"
+		elseif script.Seconds.Value == 1 then
+			stringSeconds = "01"
+		elseif script.Seconds.Value == 2 then
+			stringSeconds = "02"
+		elseif script.Seconds.Value == 3 then
+			stringSeconds = "03"
+		elseif script.Seconds.Value == 4 then
+			stringSeconds = "04"
+		elseif script.Seconds.Value == 5 then
+			stringSeconds = "05"
+		elseif script.Seconds.Value == 6 then
+			stringSeconds = "06"
+		elseif script.Seconds.Value == 7 then
+			stringSeconds = "07"
+		elseif script.Seconds.Value == 8 then
+			stringSeconds = "08"
+		elseif script.Seconds.Value == 9 then
+			stringSeconds = "09"
+		elseif script.Seconds.Value >= 10 then
+			stringSeconds = script.Seconds.Value
+		end
+	
+		if script.Minutes.Value == 0 then
+			stringMinutes = "00"
+		elseif script.Minutes.Value == 1 then
+			stringMinutes = "01"
+		elseif script.Minutes.Value == 2 then
+			stringMinutes = "02"
+		elseif script.Minutes.Value == 3 then
+			stringMinutes = "03"
+		elseif script.Minutes.Value == 4 then
+			stringMinutes = "04"
+		elseif script.Minutes.Value == 5 then
+			stringMinutes = "05"
+		elseif script.Minutes.Value == 6 then
+			stringMinutes = "06"
+		elseif script.Minutes.Value == 7 then
+			stringMinutes = "07"
+		elseif script.Minutes.Value == 8 then
+			stringMinutes = "08"
+		elseif script.Minutes.Value == 9 then
+			stringMinutes = "09"
+		elseif script.Minutes.Value >= 10 then
+			stringMinutes = script.Minutes.Value
+		end
+	
+		script.TotalTime.Value = script.Hours.Value .. ":" .. stringMinutes .. ":" .. stringSeconds
+	end
+	
+end
+coroutine.wrap(DBIDFR_fake_script)()
