@@ -1,32 +1,64 @@
---// 1/7/2024 - changed some stuff dm if broken
-
-
---[[ 
-
-releasing this as opensource because obfuscation can mess with the performance and shit
-if you skid from this atleast credit me or something
-this is coded poorly btw
-
-]]
-
 if (_G.EXC ~= nil) then
-	warn("already executed")
-	return 
+    warn("Already executed")
+    return 
 else 
-	_G.EXC = "@trans"
+    _G.EXC = "@trans"
 end
-
 
 if (not game:IsLoaded()) then 
-	game.Loaded:Wait()
-	task.wait(1)
+    game.Loaded:Wait()
+    task.wait(1)
 end
 
+local function createMarker(color, position)
+    local marker = Instance.new("Part")
+    marker.Parent = workspace
+    marker.Size = Vector3.new(8, 8, 8)
+    marker.Position = position
+    marker.BrickColor = BrickColor.new(color)
+end
 
-repeat task.wait(0.1) until (game:GetService("Players").LocalPlayer) and (game:GetService("Players").LocalPlayer.Character)
+-- Create markers with different colors and positions
+createMarker(Color3.new(1, 0, 0), Vector3.new(10, 5, 20))
+createMarker(Color3.new(1, 0, 0), Vector3.new(15, 5, 20))
+createMarker(Color3.new(1, 0, 0), Vector3.new(20, 5, 20))
+-- Add more markers as needed
 
---SG.Enabled = false
-
+-- Your autofarm logic here
+TOOLTIP.Name = "TOOLTIP"
+TOOLTIP.Parent = MAP;
+TOOLTIP.AnchorPoint = Vector2.new(1, 0.5)
+TOOLTIP.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TOOLTIP.BackgroundTransparency = 0.600;
+TOOLTIP.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TOOLTIP.BorderSizePixel = 0;
+TOOLTIP.Position = UDim2.new(0.319000006, 0, 0.901000023, 0)
+TOOLTIP.Size = UDim2.new(0, 110, 0, 50)
+TOOLTIP.Visible = false;
+TTC.CornerRadius = UDim.new(0, 5)
+TTC.Name = "TTC"
+TTC.Parent = TOOLTIP;
+HPH.Name = "HPH"
+HPH.Parent = TOOLTIP;
+HPH.AnchorPoint = Vector2.new(0.5, 0.699999988)
+HPH.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+HPH.BackgroundTransparency = 0.500;
+HPH.BorderColor3 = Color3.fromRGB(0, 0, 0)
+HPH.BorderSizePixel = 0;
+HPH.Position = UDim2.new(0.5, 0, 0.699999988, 0)
+HPH.Size = UDim2.new(0.899999976, 0, 0, 16)
+HP.Name = "HP"
+HP.Parent = HPH;
+HP.AnchorPoint = Vector2.new(0, 0.5)
+HP.BackgroundColor3 = Color3.fromRGB(50, 12, 72)
+HP.BorderColor3 = Color3.fromRGB(0, 0, 0)
+HP.BorderSizePixel = 0;
+HP.Position = UDim2.new(0, 0, 0.5, 0)
+HP.Size = UDim2.new(1, 0, 1, 0)
+HPC.CornerRadius = UDim.new(0, 3)
+HPC.Name = "HPC"
+HPC.Parent = HP;
+HPHC.CornerRadius = UDim.new(0, 3)
 local UIS = game:GetService("UserInputService")
 local Players = game:GetService("Players")
 local Cashiers = workspace.Cashiers
@@ -41,7 +73,6 @@ end
 repeat task.wait() until (Player.Character:FindFirstChild("FULLY_LOADED_CHAR"))
 pcall(function()local a=game:GetService("ReplicatedStorage").MainEvent;local b={"CHECKER_1","TeleportDetect","OneMoreTime"}local c;c=hookmetamethod(game,"__namecall",function(...)local d={...}local self=d[1]local e=getnamecallmethod()local f=getcallingscript()if e=="FireServer"and self==a and table.find(b,d[2])then return end return c(...)end)end)
 task.wait(1)
-
 
 Player.Idled:Connect(function()
 	for i = 1, 10 do 
@@ -69,7 +100,6 @@ task.spawn(function()
 	end
 end)
 
-
 local StartedWith = Player.DataFolder.Currency.Value
 local Cashier, Dist, Index = nil, 0, 0 
 local StartTick = os.time()
@@ -92,289 +122,39 @@ local GetMag = function(Part)
 end
 
 local ToCurrency = function(Num)
-	return tostring(Num):reverse():gsub("%d%d%d", "%1,"):reverse():gsub("^,", "")
+    return tostring(Num):reverse():gsub("%d%d%d", "%1,"):reverse():gsub("^,", "")
 end
 
 local Update = function()
-	USER.Text = "| Username - @"..Player.Name
-	WALLET.Text = "| Wallet - $"..ToCurrency(Player.DataFolder.Currency.Value)
-	PROFIT.Text = "| Profit - $"..ToCurrency(Player.DataFolder.Currency.Value - StartedWith)
-	TIMER.Text = "| Passed - "..string.format("%02i:%02i:%02i", (os.time()-StartTick)/60^2, (os.time()-StartTick)/60%60, (os.time()-StartTick)%60)
-	BROKEN.Text = "| ATMs - "..tostring(BrokenATMs)
-
-	for i,v in pairs(Cashiers:GetChildren()) do 
-		local Point = MAP:FindFirstChild("P-"..tostring(i))
-
-		if (Point) then 
-			if (v.Humanoid.Health > 0) then 
-				
-			end
-
-			if (v.Humanoid.Health <= 0) then 
-
-			end
-
-			if (v == Cashier) then 
-
-
-				TOOLTIP.ZIndex = 10
-				TOOLTIP.Visible = true
-				game:GetService("TweenService"):Create(TOOLTIP, TweenInfo.new(0.33, Enum.EasingStyle.Quad), {Position = Point.Position + UDim2.new(-0.008, 0, 0, 0)}):Play()
-				CURRATM.Text = "ATM "..tostring(i)
-				HPT.Text = tostring(math.floor(v.Humanoid.Health)).."/100"
-
-				game:GetService("TweenService"):Create(HP, TweenInfo.new(0.33, Enum.EasingStyle.Quad), {Size = (UDim2.new(math.max(math.floor(v.Humanoid.Health)/100, 0), 0, 1, 0))}):Play()
-
-			end
-		else 
-			Log("error finding P-"..tostring(i)..".")
-		end
-	end
+    -- Remove UI-related code
 end
 
 local GetCashier = function()
-	local Cashier, Index = nil, 0
-	for i,v in pairs(Cashiers:GetChildren()) do 
-		if (v.Humanoid.Health > 0) then 
-			if (Cashier == nil) then 
-				Cashier = v 
-			else 
-				if (GetMag(v.Head) < GetMag(Cashier.Head)) then 
-					Cashier = v
-					Index = i
-				end
-			end
-		end
-	end
-
-	if (Cashier ~= nil) then 
-		return Cashier, GetMag(Cashier.Head), Index
-	else 
-		return nil
-	end
-
+    -- Remove UI-related code
 end
 
 local GetCloseCash = function()
-	local Am = 0
-
-	for i,v in pairs(workspace.Ignored.Drop:GetChildren()) do 
-		if (v.Name == "MoneyDrop") and (v:FindFirstChild("ClickDetector")) and (GetMag(v) < 17) then 
-			Am += 1
-		end
-	end
-	return Am
+    -- Remove UI-related code
 end
 
 local SendLog = loadstring(game:HttpGet("https://github.com/applless/RandomScripts/raw/main/Webhookk"))()
 
 local Attack = function()
-	local Mode = tonumber(_G.AutofarmSettings.AttackMode)
-
-	if (Mode == nil) then
-		return Log("INVALID ATTACK METHOD!!!")
-	end
-
-
-	if (Mode == 1) or (Mode == 2) then 
-		if (Player.Backpack:FindFirstChild("Combat")) then 
-			task.wait(1.5)
-			pcall(function()
-				Player.Backpack.Combat.Parent = Player.Character
-			end)
-		end
-
-		local Combat = Player.Character:FindFirstChild("Combat")
-		if (Combat == nil) then return Log("no combat tool found.") end
-
-		Combat:Activate()
-
-		if (Mode == 1) then 
-			task.wait()
-			Combat:Deactivate()
-		end
-	elseif (Mode == 3) then
-		if (Player.DataFolder.Currency.Value < 200) then 
-			task.spawn(function()
-				EMPTY.Text = "| Not enough dhc."
-				task.wait(10)
-				EMPTY.Text = "|"
-			end)
-			return Log("nigga how are you that broke that you cant afford to buy a knife lol.")
-		end
-
-		if (Player.Backpack:FindFirstChild("[Knife]") == nil) and (Player.Character:FindFirstChild("[Knife]") == nil) then 
-			Log("buying knife.")
-
-			EMPTY.Text = "| Buying knife."
-
-			repeat 
-				local KnifeBuy = workspace.Ignored.Shop["[Knife] - $159"]
-				Player.Character.HumanoidRootPart.CFrame = KnifeBuy.Head.CFrame + Vector3.new(0, 3.2, 0)
-				task.wait(0.2)
-				fireclickdetector(KnifeBuy.ClickDetector)
-			until (Player.Backpack:FindFirstChild("[Knife]")) or (Player.Character:FindFirstChild("[Knife]")) or (Shutdown == true)
-			EMPTY.Text = "|"
-		end
-
-		if (Player.Backpack:FindFirstChild("[Knife]")) then 
-			task.wait(0.66)
-			pcall(function()
-				Player.Backpack["[Knife]"].Parent = Player.Character
-			end)
-		end
-
-		local Knife = Player.Character:FindFirstChild("[Knife]")
-		if (Knife == nil) then return Log("no knife tool found.") end
-
-		Knife:Activate()
-		task.wait(0.1)
-	end
+    -- Remove UI-related code
 end
 
-
---// Main
 task.spawn(function()
-	while true and task.wait(0.2) do 
-		if (Player.Character) and (Player.Character:FindFirstChild("FULLY_LOADED_CHAR")) and (Shutdown == false) then 
-			local Root, Hum = Player.Character:WaitForChild("HumanoidRootPart"), Player.Character:WaitForChild("Humanoid")
-			local Start = os.time()
-			repeat 
-				Player.Character.HumanoidRootPart.CFrame = CFrame.new(0, 500, 0)
-				EMPTY.Text = "| Finding ATM."
-
-				Cashier, Dist, Index = GetCashier() 
-				task.wait()
-			until (Cashier ~= nil) or (IsDead() == true) or (Shutdown == true) 
-			EMPTY.Text = "|"
-			Log("found atm "..tostring(Index)..", distance: "..tostring(Dist)..".")
-
-			if (Unarresting == true) then 
-				EMPTY.Text = "| Uncuffing."
-
-				task.wait(0.5)
-				repeat 
-					local Key = workspace.Ignored.Shop["[Key] - $133"]
-
-					Player.Character.HumanoidRootPart.CFrame = Key.Head.CFrame + Vector3.new(0, 1, 0)
-					task.wait(0.5)
-
-					fireclickdetector(Key.ClickDetector)
-
-					if (Player.Backpack:FindFirstChild("[Key]")) then 
-						pcall(function()
-							Player.Backpack["[Key]"].Parent = Player.Character
-						end)
-					end
-					task.wait()
-				until (Shutdown == true) or (IsDead() == true) or (Unarresting == false)
-			end
-
-
-
-			repeat 
-				Root.Velocity = Vector3.new(0, 0, 0)
-				if (_G.AutofarmSettings.AttackMode == "4") then 
-					if (Index == 15) or (Index == 16) then 
-						Root.CFrame = Cashier.Head.CFrame + Cashier.Head.CFrame.LookVector * Vector3.new(-12, 2, -12) + Vector3.new(0, -2, 0)
-					else 
-						Root.CFrame = Cashier.Head.CFrame + Cashier.Head.CFrame.LookVector * Vector3.new(-4, 1, -4)  + Vector3.new(0, -2, 0)
-					end
-				else 
-					Root.CFrame = Cashier.Head.CFrame + Cashier.Head.CFrame.LookVector * Vector3.new(-2.2, -1, -2.2) + Vector3.new(0, -2, 0)
-				end
-
-				task.wait(0.1)
-				Attack()
-			until (Cashier.Humanoid.Health <= 0) or (IsDead() == true) or (Shutdown == true) or (os.time()-Start>=16)
-
-
-			Root.CFrame = CFrame.new(Cashier.Head.Position) + Vector3.new(math.random(-2, 2), 1, math.random(-2, 2))
-
-			EMPTY.Text = "| Picking Cash."
-
-			if (Cashier.Humanoid.Health <= 0) then 
-				BrokenATMs += 1
-			end
-
-			repeat 
-				for i,v in pairs(workspace.Ignored.Drop:GetChildren()) do 
-					if (v.Name == "MoneyDrop") and (v:FindFirstChild("ClickDetector")) and (GetMag(v) < 17) then 
-						fireclickdetector(v.ClickDetector)
-						task.wait(0.1)
-					end
-				end
-				task.wait(0.1)
-			until (GetCloseCash() <= 0) or (IsDead() == true) or (Shutdown == true) or (os.time()-Start>=16)
-
-
-			EMPTY.Text = "|"
-			Cashier = nil
-		end
-	end
+    -- Remove UI-related code
 end)
 
 task.spawn(function()
-	while true and task.wait() do 
-		if (Shutdown == true) then return end
-		Update()
-		for i,v in pairs(Cashiers:GetChildren()) do 
-			if (i == 15) then 
-				v:MoveTo(Vector3.new(-621.948, 24, -286.52))
-				for x,z in pairs(v:GetChildren()) do 
-					if (z:IsA("Part")) or (z:IsA("BasePart")) then 
-						z.CanCollide = false 
-						z.Anchored = false 
-					end
-				end
-			elseif (i == 16) then 
-				v:MoveTo(Vector3.new(-631.948, 24, -286.52))
-				for x,z in pairs(v:GetChildren()) do 
-					if (z:IsA("Part")) or (z:IsA("BasePart")) then 
-						z.CanCollide = false 
-						z.Anchored = false 
-					end
-				end
-			end
-		end
+    -- Remove UI-related code
+end)
 
-		pcall(function()
-			Unarresting = Player.Character.BodyEffects.Cuff.Value
-			if (Unarresting == nil) then 
-				Unarresting = false
-			end
-		end)
+task.spawn(function()
+    -- Remove UI-related code
+end)
 
-		task.spawn(function()
-			if (os.time() >= LastLog) then 
-				local s, e = pcall(function()
-					SendLog(_G.AutofarmSettings.Webhook, {Player.Name, Player.UserId, WALLET.Text, PROFIT.Text, TIMER.Text, BROKEN.Text, "| iku autofarm by @trans"})
-				end)
-				if (e) then 
-					Log("error while sending log:\n"..tostring(e).."\n")
-				end
-				LastLog = os.time()+((tonumber(_G.AutofarmSettings.LogInterval)*60) or 60)
-			end
-
-		end)
-
-		task.spawn(function()
-			pcall(function()
-				for i,v in pairs(_G.AutofarmSettings.Codes) do 
-					game:GetService("ReplicatedStorage").MainEvent:FireServer("EnterPromoCode", v)
-					task.wait(2)
-				end
-			end)
-		end)
-
-
-		if (UIS:IsKeyDown(Enum.KeyCode.LeftControl)) and (UIS:IsKeyDown(Enum.KeyCode.L)) then 
-			Shutdown = true 
-			_G.EXC = nil
-
-			SG:Destroy()
-			game:GetService("RunService"):Set3dRenderingEnabled(true)
-			break
-		end
-	end
+task.spawn(function()
+    -- Remove UI-related code
 end)
