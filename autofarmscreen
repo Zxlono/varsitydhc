@@ -1,4 +1,3 @@
--- Made By kobe0921 On Discord
 -- Gui to Lua
 -- Version: 3.2
 
@@ -24,6 +23,8 @@ local TotalTime = Instance.new("TextLabel")
 local UIAspectRatioConstraint_7 = Instance.new("UIAspectRatioConstraint")
 local UiCredit = Instance.new("TextLabel")
 local UIAspectRatioConstraint_8 = Instance.new("UIAspectRatioConstraint")
+local moneyTextLabel = Instance.new("TextLabel")
+local UIAspectRatioConstraint_9 = Instance.new("UIAspectRatioConstraint")
 
 --Properties:
 
@@ -76,7 +77,7 @@ FreeVersionText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 FreeVersionText.BackgroundTransparency = 1.000
 FreeVersionText.BorderColor3 = Color3.fromRGB(0, 0, 0)
 FreeVersionText.BorderSizePixel = 0
-FreeVersionText.Position = UDim2.new(0.47400406, 0, 0.641907156, 0)
+FreeVersionText.Position = UDim2.new(0.47400406, 0, 0.644865215, 0)
 FreeVersionText.Size = UDim2.new(0.170921996, 0, 0.0714985356, 0)
 FreeVersionText.Font = Enum.Font.Unknown
 FreeVersionText.Text = "(Free Version)"
@@ -105,7 +106,7 @@ VersionText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 VersionText.BackgroundTransparency = 1.000
 VersionText.BorderColor3 = Color3.fromRGB(0, 0, 0)
 VersionText.BorderSizePixel = 0
-VersionText.Position = UDim2.new(0.47274676, 0, 0.60330528, 0)
+VersionText.Position = UDim2.new(0.472072244, 0, 0.610700369, 0)
 VersionText.Size = UDim2.new(0.170921996, 0, 0.0714985356, 0)
 VersionText.Font = Enum.Font.Unknown
 VersionText.Text = "Version 1.0.0"
@@ -137,7 +138,7 @@ FPS.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 FPS.BackgroundTransparency = 1.000
 FPS.BorderColor3 = Color3.fromRGB(0, 0, 0)
 FPS.BorderSizePixel = 0
-FPS.Position = UDim2.new(0.482323021, 0, 0.564010561, 0)
+FPS.Position = UDim2.new(0.482323021, 0, 0.549220562, 0)
 FPS.Size = UDim2.new(0.149645388, 0, 0.0538687594, 0)
 FPS.Font = Enum.Font.Unknown
 FPS.Text = "Loading FPS.."
@@ -153,7 +154,7 @@ TotalTime.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TotalTime.BackgroundTransparency = 1.000
 TotalTime.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TotalTime.BorderSizePixel = 0
-TotalTime.Position = UDim2.new(0.482801318, 0, 0.524769127, 0)
+TotalTime.Position = UDim2.new(0.481999993, 0, 0.584999979, 0)
 TotalTime.Size = UDim2.new(0.149645388, 0, 0.0538687594, 0)
 TotalTime.Font = Enum.Font.Unknown
 TotalTime.Text = "Loading Timer.."
@@ -169,7 +170,7 @@ UiCredit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 UiCredit.BackgroundTransparency = 1.000
 UiCredit.BorderColor3 = Color3.fromRGB(0, 0, 0)
 UiCredit.BorderSizePixel = 0
-UiCredit.Position = UDim2.new(0.47400406, 0, 0.682986379, 0)
+UiCredit.Position = UDim2.new(0.47400406, 0, 0.686683953, 0)
 UiCredit.Size = UDim2.new(0.170921996, 0, 0.0714985356, 0)
 UiCredit.Font = Enum.Font.Unknown
 UiCredit.Text = "UI Made By kobe0921"
@@ -179,9 +180,25 @@ UiCredit.TextSize = 17.000
 UIAspectRatioConstraint_8.Parent = UiCredit
 UIAspectRatioConstraint_8.AspectRatio = 3.301
 
+moneyTextLabel.Name = "moneyTextLabel"
+moneyTextLabel.Parent = Frame
+moneyTextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+moneyTextLabel.BackgroundTransparency = 1.000
+moneyTextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+moneyTextLabel.BorderSizePixel = 0
+moneyTextLabel.Position = UDim2.new(0.481999993, 0, 0.513999999, 0)
+moneyTextLabel.Size = UDim2.new(0.149645388, 0, 0.0538687594, 0)
+moneyTextLabel.Font = Enum.Font.Unknown
+moneyTextLabel.Text = "Loading FPS.."
+moneyTextLabel.TextColor3 = Color3.fromRGB(17, 255, 0)
+moneyTextLabel.TextSize = 16.000
+
+UIAspectRatioConstraint_9.Parent = moneyTextLabel
+UIAspectRatioConstraint_9.AspectRatio = 3.836
+
 -- Scripts:
 
-local function HOBIFXO_fake_script() -- Display.LocalScript 
+local function YDQZRM_fake_script() -- Display.LocalScript 
 	local script = Instance.new('LocalScript', Display)
 
 	local frame = script.Parent
@@ -190,8 +207,8 @@ local function HOBIFXO_fake_script() -- Display.LocalScript
 	
 	frame.Text = "" .. player.DisplayName
 end
-coroutine.wrap(HOBIFXO_fake_script)()
-local function PKNPP_fake_script() -- Frame.PlayerImageScript 
+coroutine.wrap(YDQZRM_fake_script)()
+local function RQVYC_fake_script() -- Frame.PlayerImageScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	local frame = script.Parent
@@ -210,8 +227,8 @@ local function PKNPP_fake_script() -- Frame.PlayerImageScript
 	
 	frame.PlayerImage.Image = content
 end
-coroutine.wrap(PKNPP_fake_script)()
-local function ZLTLR_fake_script() -- Username.LocalScript 
+coroutine.wrap(RQVYC_fake_script)()
+local function LNVDAZL_fake_script() -- Username.LocalScript 
 	local script = Instance.new('LocalScript', Username)
 
 	local frame = script.Parent
@@ -220,8 +237,8 @@ local function ZLTLR_fake_script() -- Username.LocalScript
 	
 	frame.Text = "" .. player.Name
 end
-coroutine.wrap(ZLTLR_fake_script)()
-local function JPXCQN_fake_script() -- FPS.FPSScript 
+coroutine.wrap(LNVDAZL_fake_script)()
+local function MMFP_fake_script() -- FPS.FPSScript 
 	local script = Instance.new('LocalScript', FPS)
 
 	local RunService = game:GetService('RunService')
@@ -237,8 +254,8 @@ local function JPXCQN_fake_script() -- FPS.FPSScript
 		framesloaded = 0
 	end
 end
-coroutine.wrap(JPXCQN_fake_script)()
-local function WTBN_fake_script() -- TotalTime.LocalScript 
+coroutine.wrap(MMFP_fake_script)()
+local function ONUGXC_fake_script() -- TotalTime.LocalScript 
 	local script = Instance.new('LocalScript', TotalTime)
 
 	-- Put this script in a LocalScript in a player's PlayerGui
@@ -266,8 +283,8 @@ local function WTBN_fake_script() -- TotalTime.LocalScript
 		updateTime()
 	end
 end
-coroutine.wrap(WTBN_fake_script)()
-local function IHFDT_fake_script() -- Frame.PingReturner 
+coroutine.wrap(ONUGXC_fake_script)()
+local function IKPYD_fake_script() -- Frame.PingReturner 
 	local script = Instance.new('Script', Frame)
 
 	local event = game:GetService("ReplicatedStorage"):WaitForChild("GetPing")
@@ -276,8 +293,28 @@ local function IHFDT_fake_script() -- Frame.PingReturner
 		return player:GetNetworkPing()
 	end
 end
-coroutine.wrap(IHFDT_fake_script)()
-local function DBIDFR_fake_script() -- AutoFarmScreen.ServerTime 
+coroutine.wrap(IKPYD_fake_script)()
+local function BQBZQA_fake_script() -- moneyTextLabel.MoneyLabelScript 
+	local script = Instance.new('LocalScript', moneyTextLabel)
+
+	-- Put this script in a LocalScript
+	
+	local player = game.Players.LocalPlayer
+	local moneyTextLabel = script.Parent -- Replace with the actual path to your TextLabel
+	
+	-- Function to update money amount on TextLabel
+	local function updateMoney()
+		moneyTextLabel.Text = "$" .. tostring(player:WaitForChild("DataFolder").Currency.Value)
+	end
+	
+	-- Connect the updateMoney function to changes in the player's money
+	player:WaitForChild("DataFolder").Currency.Changed:Connect(updateMoney)
+	
+	-- Initial update
+	updateMoney()
+end
+coroutine.wrap(BQBZQA_fake_script)()
+local function IKGUPG_fake_script() -- AutoFarmScreen.ServerTime 
 	local script = Instance.new('Script', AutoFarmScreen)
 
 	script.Hours.Value = 0
@@ -352,4 +389,4 @@ local function DBIDFR_fake_script() -- AutoFarmScreen.ServerTime
 	end
 	
 end
-coroutine.wrap(DBIDFR_fake_script)()
+coroutine.wrap(IKGUPG_fake_script)()
