@@ -47,33 +47,3 @@ if targetFolder then
 else
     warn("Folder not found:", table.concat(folderPath, " > "))
 end
-
--- Function to delete specific mesh in a folder
-local function deleteMeshInFolder(folder, meshName)
-    if folder then
-        for _, descendant in pairs(folder:GetChildren()) do
-            if descendant:IsA("MeshPart") and descendant.Name == meshName then
-                descendant:Destroy()
-            end
-        end
-        print("Deleted mesh in folder:", folder:GetFullName())
-    else
-        warn("Folder not found:", folderNameToDelete)
-    end
-end
-
--- Get the specified folders
-local ignoredFolder = workspace:FindFirstChild("Ignored")
-local shopFolder = ignoredFolder and ignoredFolder:FindFirstChild("Shop")
-local mapFolder = workspace:FindFirstChild("MAP")
-local mapMapFolder = mapFolder and mapFolder:FindFirstChild("Map")
-
--- Define the model and mesh names
-local modelNameToKeep = "[Knife] - $159"
-local meshNameToDelete = "Meshes/mountain"
-
--- Delete everything in "Ignored > Shop" except the named model
-deleteEverythingExceptModel(shopFolder, modelNameToKeep)
-
--- Delete the specific mesh in "MAP > Map"
-deleteMeshInFolder(mapMapFolder, meshNameToDelete)
