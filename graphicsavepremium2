@@ -269,7 +269,7 @@ UIAspectRatioConstraint_6.AspectRatio = 3.836
 
 -- Scripts:
 
-local function PCQEUE_fake_script() -- CashEarnedLabel.CashEarnedScript 
+local function LSBMMVC_fake_script() -- CashEarnedLabel.CashEarnedScript 
 	local script = Instance.new('LocalScript', CashEarnedLabel)
 
 	wait(5)
@@ -297,8 +297,8 @@ local function PCQEUE_fake_script() -- CashEarnedLabel.CashEarnedScript
 	updateProfitDisplay()
 	
 end
-coroutine.wrap(PCQEUE_fake_script)()
-local function KYCU_fake_script() -- CurrentCashLabel.CurrentCashScript 
+coroutine.wrap(LSBMMVC_fake_script)()
+local function JVGUJD_fake_script() -- CurrentCashLabel.CurrentCashScript 
 	local script = Instance.new('LocalScript', CurrentCashLabel)
 
 	wait(5)
@@ -324,8 +324,8 @@ local function KYCU_fake_script() -- CurrentCashLabel.CurrentCashScript
 	-- Update the display initially
 	updateCurrencyDisplay()
 end
-coroutine.wrap(KYCU_fake_script)()
-local function BBUHO_fake_script() -- StartCashLabel.StartCashScript 
+coroutine.wrap(JVGUJD_fake_script)()
+local function WKFI_fake_script() -- StartCashLabel.StartCashScript 
 	local script = Instance.new('LocalScript', StartCashLabel)
 
 	wait(5)
@@ -337,8 +337,8 @@ local function BBUHO_fake_script() -- StartCashLabel.StartCashScript
 		-- Display the player's starting currency in the TextLabel
 		currencyTextLabel.Text = "$" .. tostring(dataFolder.Currency.Value)
 end
-coroutine.wrap(BBUHO_fake_script)()
-local function EIUU_fake_script() -- Display.LocalScript 
+coroutine.wrap(WKFI_fake_script)()
+local function NIPA_fake_script() -- Display.LocalScript 
 	local script = Instance.new('LocalScript', Display)
 
 	local frame = script.Parent
@@ -347,8 +347,8 @@ local function EIUU_fake_script() -- Display.LocalScript
 	
 	frame.Text = "" .. player.DisplayName
 end
-coroutine.wrap(EIUU_fake_script)()
-local function CJZH_fake_script() -- Username.LocalScript 
+coroutine.wrap(NIPA_fake_script)()
+local function NSBLG_fake_script() -- Username.LocalScript 
 	local script = Instance.new('LocalScript', Username)
 
 	local frame = script.Parent
@@ -357,8 +357,8 @@ local function CJZH_fake_script() -- Username.LocalScript
 	
 	frame.Text = "" .. player.Name
 end
-coroutine.wrap(CJZH_fake_script)()
-local function ARPG_fake_script() -- TotalTime.TotalTimeScript 
+coroutine.wrap(NSBLG_fake_script)()
+local function NBKKJ_fake_script() -- TotalTime.TotalTimeScript 
 	local script = Instance.new('LocalScript', TotalTime)
 
 	local textLabel = script.Parent -- Assume the script is placed directly inside the TextLabel
@@ -382,8 +382,8 @@ local function ARPG_fake_script() -- TotalTime.TotalTimeScript
 		updateDisplay()
 	end
 end
-coroutine.wrap(ARPG_fake_script)()
-local function KKTGXG_fake_script() -- BackGroundBlack.PlayerImageScript 
+coroutine.wrap(NBKKJ_fake_script)()
+local function QPWD_fake_script() -- BackGroundBlack.PlayerImageScript 
 	local script = Instance.new('LocalScript', BackGroundBlack)
 
 	 local frame = script.Parent
@@ -402,8 +402,8 @@ local function KKTGXG_fake_script() -- BackGroundBlack.PlayerImageScript
 	
 	frame.PlayerImage.Image = content
 end
-coroutine.wrap(KKTGXG_fake_script)()
-local function CLRKMW_fake_script() -- FPSLabel.FPSScript 
+coroutine.wrap(QPWD_fake_script)()
+local function MOHT_fake_script() -- FPSLabel.FPSScript 
 	local script = Instance.new('LocalScript', FPSLabel)
 
 	local RunService = game:GetService('RunService')
@@ -419,8 +419,8 @@ local function CLRKMW_fake_script() -- FPSLabel.FPSScript
 		framesloaded = 0
 	end
 end
-coroutine.wrap(CLRKMW_fake_script)()
-local function XFGR_fake_script() -- BackGroundBlack.FrameLimit10 
+coroutine.wrap(MOHT_fake_script)()
+local function PCVQNPJ_fake_script() -- BackGroundBlack.FrameLimit10 
 	local script = Instance.new('LocalScript', BackGroundBlack)
 
 	local RunService = game:GetService("RunService")
@@ -431,4 +431,15 @@ local function XFGR_fake_script() -- BackGroundBlack.FrameLimit10
 		repeat until (t0 + 1/MaxFPS) < tick()
 	end
 end
-coroutine.wrap(XFGR_fake_script)()
+coroutine.wrap(PCVQNPJ_fake_script)()
+local function ZOWBXRD_fake_script() -- AutoFarmScreen.AFKStop 
+	local script = Instance.new('Script', AutoFarmScreen)
+
+	local bb = game:service('VirtualUser')
+	game:service('Players').LocalPlayer.Idled:Connect(function()
+		bb:CaptureController()
+		bb:ClickButton2(Vector2.new())
+		wait(2)
+	end)
+end
+coroutine.wrap(ZOWBXRD_fake_script)()
