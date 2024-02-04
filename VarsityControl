@@ -220,6 +220,10 @@ end
 
 spawn(controlFPS)
 
+game:GetService("RunService"):Set3dRenderingEnabled(false)
+settings().Rendering.QualityLevel = 1
+UserSettings().GameSettings.MasterVolume = 0
+
 -- Anti-AFK Script
 local VirtualUser = game:GetService('VirtualUser')
 game.Players.LocalPlayer.Idled:Connect(function()
