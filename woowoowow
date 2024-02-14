@@ -1,11 +1,3 @@
-if _G.scriptExecuted then
-    print("This script has already run. Exiting...")
-    return
-else
-    _G.scriptExecuted = true
-    print("Running the script for the first time.")
-end
-
 if not game:IsLoaded() then
 	game.Loaded:Wait()
 end
