@@ -406,7 +406,7 @@ if checkKey() then
 	local function VAER_fake_script() -- CashEarnedLabel.CashEarnedScript 
 		local script = Instance.new('LocalScript', CashEarnedLabel)
 
-		wait(5)
+		wait(1.5)
 
 		local player = game.Players.LocalPlayer
 		local currencyTextLabel = script.Parent
@@ -435,7 +435,7 @@ if checkKey() then
 	local function ZJNZPX_fake_script() -- CurrentCashLabel.CurrentCashScript 
 		local script = Instance.new('LocalScript', CurrentCashLabel)
 
-		wait(5)
+		wait(1.5)
 
 		local player = game.Players.LocalPlayer
 		local currencyTextLabel = script.Parent
@@ -462,7 +462,7 @@ if checkKey() then
 	local function UZFNDYB_fake_script() -- StartCashLabel.StartCashScript 
 		local script = Instance.new('LocalScript', StartCashLabel)
 
-		wait(5)
+		wait(1.5)
 
 		local player = game.Players.LocalPlayer
 		local dataFolder = player:WaitForChild("DataFolder")
